@@ -62,6 +62,15 @@ public class OrderDao {
         return loadOne(query, String.valueOf(id));
     }
 
+    public static List<Order> loadLast(int limit) {
+        //language=MySQL
+        String query = "SELECT *\n" +
+                "FROM orders\n" +
+                "ORDER BY received DESC\n" +
+                "LIMIT ?";
+        return loadMany(query, String.valueOf(limit));
+    }
+
     public static void save(Order order) {
         List<String> parameters = new ArrayList<>();
         parameters.add(order.getReceived().toString());
