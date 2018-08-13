@@ -9,11 +9,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Lista klientów</title>
+    <c:if test="${mode == 'show'}">
+        <c:set var="title" value="Lista klientów"/>
+        <c:set var="label" value="Tryb wyświetlania"/>
+    </c:if>
+    <c:if test="${mode == 'edit'}">
+        <c:set var="title" value="Lista klientów (tryb edycji)"/>
+        <c:set var="label" value="Tryb edycji"/>
+    </c:if>
+
+    <title>${title}</title>
 </head>
 <body>
 
-<div><a href="/customer-add">Dodaj klienta</a></div>
+<form action="/customer-show" method="post">
+    <button type="submit">${label}</button>
+</form>
+
+<div>
+    <c:if test="${mode == 'edit'}">
+        <a href="/customer-add">Dodaj klienta</a>
+    </c:if>
+</div>
 
 <table>
     <tr>
@@ -21,7 +38,10 @@
         <th>Imię</th>
         <th>Nazwisko</th>
         <th>Data urodzenia</th>
-        <th>Akcje</th>
+        <c:if test="${mode == 'edit'}">
+            <th>Akcje</th>
+        </c:if>
+
     </tr>
     <c:forEach var="customer" items="${customers}">
         <tr>
@@ -29,10 +49,12 @@
             <td>${customer.name}</td>
             <td>${customer.surname}</td>
             <td>${customer.birthday}</td>
-            <td>
-                <a href="/customer-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>
-                <a href="/customer-del?id=${customer.id}">Usuń</a>
-            </td>
+            <c:if test="${mode == 'edit'}">
+                <td>
+                    <a href="/customer-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>
+                    <a href="/customer-del?id=${customer.id}">Usuń</a>
+                </td>
+            </c:if>
         </tr>
     </c:forEach>
 </table>

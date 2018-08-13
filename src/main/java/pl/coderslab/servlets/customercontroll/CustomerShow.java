@@ -13,13 +13,26 @@ import java.util.ArrayList;
 
 @WebServlet(name = "CustomerShow", urlPatterns = "/customer-show")
 public class CustomerShow extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private static String mode;
 
+    @Override
+    public void init() throws ServletException {
+        mode = "show";
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if ("show".equals(mode)) {
+            mode = "edit";
+        } else {
+            mode = "show";
+        }
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Customer> customers = CustomerDao.loadAll();
         request.setAttribute("customers", customers);
+        request.setAttribute("mode", mode);
         getServletContext().getRequestDispatcher("/customers.jsp").forward(request, response);
 
     }
