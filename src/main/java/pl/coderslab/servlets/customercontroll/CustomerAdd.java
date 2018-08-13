@@ -33,7 +33,8 @@ public class CustomerAdd extends HttpServlet {
         response.sendRedirect("/customer-show");
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(javax.servlet.http.HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("mode", "add");
         getServletContext().getRequestDispatcher("/customerform.jsp").forward(request, response);
     }
 }

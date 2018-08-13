@@ -54,18 +54,17 @@ public class CustomerDao {
     }
 
     public static void save(Customer customer) {
-        List<String> parameter = new ArrayList<>();
-        parameter.add(customer.getName());
-        parameter.add(customer.getSurname());
-        parameter.add(customer.getBirthday() != null ? customer.getBirthday().toString() : null);
-
+        List<String> parameters = new ArrayList<>();
+        parameters.add(customer.getName());
+        parameters.add(customer.getSurname());
+        parameters.add(customer.getBirthday() != null ? customer.getBirthday().toString() : null);
 
         if (customer.getId() == 0) {
             //language=MySQL
             String query = "INSERT INTO customers(name, surname, birthday) VALUES(?, ?, ?)";
 
             try {
-                Integer id = DbService.insertIntoDatabase(query, parameter);
+                Integer id = DbService.insertIntoDatabase(query, parameters);
                 if (id != null) {
                     customer.setId(id);
                 }
@@ -77,8 +76,8 @@ public class CustomerDao {
             String query = "UPDATE customers SET name = ?, surname = ?, birthday = ? WHERE id = ?";
 
             try {
-                parameter.add(String.valueOf(customer.getId()));
-                DbService.executeUpdate(query, parameter);
+                parameters.add(String.valueOf(customer.getId()));
+                DbService.executeUpdate(query, parameters);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

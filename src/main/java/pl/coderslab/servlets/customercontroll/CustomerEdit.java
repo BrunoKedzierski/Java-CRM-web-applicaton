@@ -31,10 +31,6 @@ public class CustomerEdit extends HttpServlet {
             } catch (DateTimeParseException ignored) {
             }
         }
-        System.out.println(id);
-        System.out.println(name);
-        System.out.println(surname);
-        System.out.println(birthday);
 
         Customer customer = new Customer(id, name, surname, birthday);
         CustomerDao.save(customer);
@@ -65,13 +61,11 @@ public class CustomerEdit extends HttpServlet {
                 }
             }
 
-
+            request.setAttribute("mode", "edit");
             getServletContext().getRequestDispatcher("/customerform.jsp").forward(request, response);
-
         } catch (NumberFormatException e) {
-//            response.sendRedirect("/customer-show");
+            response.sendRedirect("/customer-show");
         }
-
 
     }
 }

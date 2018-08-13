@@ -12,9 +12,9 @@ public class Order {
     private String repairDescription;
     private Status status;
     private Vehicle vehicle;
-    private float price;
-    private float expense;
-    private int manhours;
+    private Float price;
+    private Float expense;
+    private Integer manhours;
 
     public Order() {
         this.id = 0;
@@ -22,13 +22,13 @@ public class Order {
 
     public Order(LocalDate received, LocalDate planedBeginning, LocalDate begun, Employee employee,
                  String problemDescription, String repairDescription, Status status, Vehicle vehicle,
-                 float price, float expense, int manhours) {
+                 Float price, Float expense, Integer manhours) {
         this(0, received, planedBeginning, begun, employee, problemDescription, repairDescription, status, vehicle, price, expense, manhours);
     }
 
     public Order(int id, LocalDate received, LocalDate planedBeginning, LocalDate begun, Employee employee,
                  String problemDescription, String repairDescription, Status status, Vehicle vehicle,
-                 float price, float expense, int manhours) {
+                 Float price, Float expense, Integer manhours) {
         this.id = id;
         this.received = received;
         this.planedBeginning = planedBeginning;
@@ -142,34 +142,38 @@ public class Order {
         return this;
     }
 
-    public float getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public Order setPrice(float price) {
+    public Order setPrice(Float price) {
         this.price = price;
         return this;
     }
 
-    public float getExpense() {
+    public Float getExpense() {
         return expense;
     }
 
-    public Order setExpense(float expense) {
+    public Order setExpense(Float expense) {
         this.expense = expense;
         return this;
     }
 
-    public int getManhours() {
+    public Integer getManhours() {
         return manhours;
     }
 
-    public Order setManhours(int manhours) {
+    public Order setManhours(Integer manhours) {
         this.manhours = manhours;
         return this;
     }
 
-    public float getManhourValue() {
-        return employee.getManhourValue();
+    public Float getManhourValue() {
+        if (employee != null) {
+            return employee.getManhourValue();
+        } else {
+            return null;
+        }
     }
 }

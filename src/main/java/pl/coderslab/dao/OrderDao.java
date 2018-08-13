@@ -16,14 +16,14 @@ public class OrderDao {
                 .setReceived(LocalDate.parse(strs[1]))
                 .setPlanedBeginning(strs[2] != null ? LocalDate.parse(strs[2]) : null)
                 .setBegun(strs[3] != null ? LocalDate.parse(strs[3]) : null)
-                .setEmployee(EmployeeDao.loadById(Integer.parseInt(strs[4])))
+                .setEmployee(strs[4] != null ? EmployeeDao.loadById(Integer.parseInt(strs[4])) : null)
                 .setProblemDescription(strs[5])
                 .setRepairDescription(strs[6])
                 .setStatus(Status.valueOf(strs[7]))
                 .setVehicle(VehicleDao.loadById(Integer.parseInt(strs[8])))
-                .setPrice(Float.parseFloat(strs[9]))
-                .setExpense(Float.parseFloat(strs[10]))
-                .setManhours(Integer.parseInt(strs[11]));
+                .setPrice(strs[9] != null ? Float.valueOf(strs[9]) : null)
+                .setExpense(strs[10] != null ? Float.valueOf(strs[10]) : null)
+                .setManhours(strs[11] != null ? Integer.valueOf(strs[11]) : null);
     }
 
     private static Order loadOne(String query, String... parameters) {
@@ -63,6 +63,19 @@ public class OrderDao {
     }
 
     public static void save(Order order) {
+        List<String> parameters = new ArrayList<>();
+        parameters.add(order.getReceived().toString());
+        parameters.add(order.getPlanedBeginning() != null ? order.getPlanedBeginning().toString() : null);
+        parameters.add(order.getBegun() != null ? order.getBegun().toString() : null);
+        parameters.add(order.getEmployee() != null ? String.valueOf(order.getEmployee().getId()) : null);
+        parameters.add(order.getProblemDescription());
+        parameters.add(order.getRepairDescription());
+        parameters.add(order.getStatus().toString());
+        parameters.add(String.valueOf(order.getVehicle().getId()));
+        parameters.add(order.getPrice() != null ? String.valueOf(order.getPrice()) : null);
+        parameters.add(order.getExpense() != null ? String.valueOf(order.getExpense()) : null);
+        parameters.add(order.getManhours() != null ? String.valueOf(order.getManhours()) : null);
+
         if (order.getId() == 0) {
             //language=MySQL
             String query = "INSERT INTO orders (received,\n" +
@@ -79,18 +92,7 @@ public class OrderDao {
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             try {
-                Integer id = DbService.insertIntoDatabase(query,
-                        order.getReceived().toString(),
-                        order.getPlanedBeginning().toString(),
-                        order.getBegun().toString(),
-                        String.valueOf(order.getEmployee().getId()),
-                        order.getProblemDescription(),
-                        order.getRepairDescription(),
-                        order.getStatus().toString(),
-                        String.valueOf(order.getVehicle().getId()),
-                        String.valueOf(order.getPrice()),
-                        String.valueOf(order.getExpense()),
-                        String.valueOf(order.getManhours()));
+                Integer id = DbService.insertIntoDatabase(query, parameters);
                 if (id != null) {
                     order.setId(id);
                 }
@@ -114,19 +116,8 @@ public class OrderDao {
                     "WHERE id = ?";
 
             try {
-                DbService.executeUpdate(query,
-                        order.getReceived().toString(),
-                        order.getPlanedBeginning().toString(),
-                        order.getBegun().toString(),
-                        String.valueOf(order.getEmployee().getId()),
-                        order.getProblemDescription(),
-                        order.getRepairDescription(),
-                        order.getStatus().toString(),
-                        String.valueOf(order.getVehicle().getId()),
-                        String.valueOf(order.getPrice()),
-                        String.valueOf(order.getExpense()),
-                        String.valueOf(order.getManhours()),
-                        String.valueOf(order.getId()));
+                parameters.add(String.valueOf(order.getId()));
+                DbService.executeUpdate(query, parameters);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
