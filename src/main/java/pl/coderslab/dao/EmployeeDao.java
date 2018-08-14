@@ -101,4 +101,12 @@ public class EmployeeDao {
             }
         }
     }
+
+
+//    SELECT crm.employees.name, crm.employees.surname, sum(orders.manhours) FROM crm.employees JOIN crm.orders ON employees.id = orders.employee_id GROUP BY orders.employee_id
+//SELECT crm.employees.name, crm.employees.surname, sum(orders.manhours)
+//    FROM crm.employees JOIN crm.orders ON employees.id = orders.employee_id
+//    WHERE orders.begun BETWEEN 2018-08-13 AND 2018-08-14
+//    GROUP BY orders.employee_id
+
 }

@@ -42,7 +42,6 @@
         <c:if test="${mode == 'edit'}">
             <th>Akcje</th>
         </c:if>
-
     </tr>
     <c:forEach var="customer" items="${customers}">
         <tr>

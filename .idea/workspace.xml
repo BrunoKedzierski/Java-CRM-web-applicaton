@@ -7,12 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cba5507-68a1-4f61-a6c0-5e245587d741" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ReportsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportManhours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportProfits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/Reports.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reports/report-manhours.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reports/report-profits.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/reports/reports.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/customers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/customers.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/dao/OrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/dao/VehicleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/dao/VehicleDao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,22 +33,24 @@
     <session id="1995955509">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="2" />
           <entry key="iml" value="6" />
-          <entry key="java" value="40" />
-          <entry key="jsp" value="21" />
-          <entry key="sql" value="2" />
+          <entry key="java" value="49" />
+          <entry key="jsp" value="29" />
+          <entry key="sql" value="11" />
           <entry key="xml" value="7" />
         </counts>
       </usages-collector>
@@ -49,20 +58,21 @@
         <counts>
           <entry key="HTML" value="2" />
           <entry key="IDEA_MODULE" value="6" />
-          <entry key="JAVA" value="40" />
-          <entry key="JSP" value="21" />
-          <entry key="SQL" value="2" />
+          <entry key="JAVA" value="49" />
+          <entry key="JSP" value="29" />
+          <entry key="SQL" value="11" />
           <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="dummy" value="3" />
           <entry key="html" value="1" />
           <entry key="iml" value="15" />
-          <entry key="java" value="791" />
-          <entry key="jsp" value="759" />
-          <entry key="sql" value="29" />
-          <entry key="txt" value="108" />
+          <entry key="java" value="1332" />
+          <entry key="jsp" value="1145" />
+          <entry key="sql" value="38" />
+          <entry key="txt" value="112" />
           <entry key="xml" value="18" />
         </counts>
       </usages-collector>
@@ -70,10 +80,10 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="15" />
-          <entry key="JAVA" value="791" />
-          <entry key="JSP" value="759" />
-          <entry key="PLAIN_TEXT" value="108" />
-          <entry key="SQL" value="29" />
+          <entry key="JAVA" value="1332" />
+          <entry key="JSP" value="1145" />
+          <entry key="PLAIN_TEXT" value="115" />
+          <entry key="SQL" value="38" />
           <entry key="XML" value="18" />
         </counts>
       </usages-collector>
@@ -92,49 +102,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="910">
+              <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/customers.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/reports.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+            <state relative-caret-position="204">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/customercontroll/CustomerShow.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/report-profits.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/report-manhours.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-              <folding>
-                <element signature="method#makeVehicle#0;class#VehicleDao#0" />
-                <element signature="method#loadOne#0;class#VehicleDao#0" />
-                <element signature="method#loadMany#0;class#VehicleDao#0" />
-                <element signature="method#loadAll#0;class#VehicleDao#0" />
-                <element signature="e#0#22#1" />
-                <element signature="method#loadById#0;class#VehicleDao#0" />
-                <element signature="e#0#35#1" />
-                <element signature="method#loadByOwnerId#0;class#VehicleDao#0" />
-                <element signature="method#save#0;class#VehicleDao#0" />
-                <element signature="e#0#95#1" />
-                <element signature="e#0#104#1" />
-                <element signature="method#delete#0;class#VehicleDao#0" />
-                <element signature="e#0#33#1" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportManhours.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportProfits.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,7 +193,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/customercontroll/CustomerEdit.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/customerform.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/CustomerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/models/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/vehiclecontroll/VehicleEdit.java" />
@@ -167,10 +205,28 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/vehiclecontroll/VehicleAdd.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/vehicles.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/vehicleform.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/customers.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/Raport.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/raports/raports.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/RaportsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/raports/raport-manhour.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/raports/raport-profits.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ReportsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/Raports.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/Reports.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/RaportProfits.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/RaportManhour.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/reports/report-manhour.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportProfits.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportManhour.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/reports/report-profits.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportManhours.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/reports/report-manhours.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/reports/reports.jsp" />
       </list>
     </option>
   </component>
@@ -207,7 +263,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,7 +323,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="coderslab" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="customercontroll" type="462c0819:PsiDirectoryNode" />
+              <item name="raports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Warsztat_Samochodowy" type="b2602c69:ProjectViewProjectNode" />
@@ -275,6 +331,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Warsztat_Samochodowy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Warsztat_Samochodowy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Warsztat_Samochodowy" type="b2602c69:ProjectViewProjectNode" />
@@ -288,13 +352,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534241034259" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534263901917" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -304,17 +368,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="pl.coderslab.servlets.vehiclecontroll" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/raports" />
       <recent name="$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/employeecontroll" />
       <recent name="$PROJECT_DIR$/src/main/webapp/test" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.coderslab.servlets.raports" />
+      <recent name="pl.coderslab.servlets.vehiclecontroll" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -440,7 +506,9 @@
       <workItem from="1534166827880" duration="10365000" />
       <workItem from="1534186837989" duration="2562000" />
       <workItem from="1534193259735" duration="2547000" />
-      <workItem from="1534234467332" duration="7123000" />
+      <workItem from="1534234467332" duration="8122000" />
+      <workItem from="1534251806338" duration="1198000" />
+      <workItem from="1534256987665" duration="7042000" />
     </task>
     <task id="LOCAL-00001" summary="poprawki 13082018-1807">
       <created>1534176435523</created>
@@ -470,25 +538,32 @@
       <option name="project" value="LOCAL" />
       <updated>1534238205662</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="poprawki 20180814-1213">
+      <created>1534241627849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534241627849</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29528000" />
+    <option name="totallyTimeSpent" value="38767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945945" visible="true" weight="0.18539014" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837837" visible="true" weight="0.18981738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" sideWeight="0.50054055" side_tool="true" weight="0.18539014" />
+      <window_info id="Web" order="2" sideWeight="0.5016216" side_tool="true" weight="0.18981738" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -549,7 +624,8 @@
     <MESSAGE value="poprawki 13082018-2152" />
     <MESSAGE value="poprawki 13082018-2330 przelacznik trybu edycji/wyswietlania na liscie klientow" />
     <MESSAGE value="poprawki 20180814-1116" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawki 20180814-1116" />
+    <MESSAGE value="poprawki 20180814-1213" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki 20180814-1213" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -609,41 +685,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-          <folding>
-            <element signature="method#loadOne#0;class#CustomerDao#0" />
-            <element signature="method#loadMany#0;class#CustomerDao#0" />
-            <element signature="method#loadAll#0;class#CustomerDao#0" />
-            <element signature="method#loadById#0;class#CustomerDao#0" />
-            <element signature="method#delete#0;class#CustomerDao#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/customerform.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/models/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="method#Vehicle#1;class#Vehicle#0" />
-            <element signature="method#Vehicle#2;class#Vehicle#0" />
-            <element signature="method#toString#0;class#Vehicle#0" />
-            <element signature="method#setId#0;class#Vehicle#0" />
-            <element signature="method#setModel#0;class#Vehicle#0" />
-            <element signature="method#setBrand#0;class#Vehicle#0" />
-            <element signature="method#setProductionYear#0;class#Vehicle#0" />
-            <element signature="method#setNextCheckup#0;class#Vehicle#0" />
-            <element signature="method#setOwner#0;class#Vehicle#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,49 +754,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/employeeform.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/employees.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/employeecontroll/EmployeeAdd.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/models/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="method#makeEmployee#0;class#EmployeeDao#0" />
-            <element signature="method#loadOne#0;class#EmployeeDao#0" />
-            <element signature="method#loadMany#0;class#EmployeeDao#0" />
-            <element signature="method#loadAll#0;class#EmployeeDao#0" />
-            <element signature="e#0#23#1" />
-            <element signature="method#loadById#0;class#EmployeeDao#0" />
-            <element signature="e#0#36#1" />
-            <element signature="method#save#0;class#EmployeeDao#0" />
-            <element signature="e#0#97#1" />
-            <element signature="e#0#107#1" />
-            <element signature="method#delete#0;class#EmployeeDao#0" />
-            <element signature="e#0#34#1" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,39 +792,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/customers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="method#makeVehicle#0;class#VehicleDao#0" />
-            <element signature="method#loadOne#0;class#VehicleDao#0" />
-            <element signature="method#loadMany#0;class#VehicleDao#0" />
-            <element signature="method#loadAll#0;class#VehicleDao#0" />
-            <element signature="e#0#22#1" />
-            <element signature="method#loadById#0;class#VehicleDao#0" />
-            <element signature="e#0#35#1" />
-            <element signature="method#loadByOwnerId#0;class#VehicleDao#0" />
-            <element signature="method#save#0;class#VehicleDao#0" />
-            <element signature="e#0#95#1" />
-            <element signature="e#0#104#1" />
-            <element signature="method#delete#0;class#VehicleDao#0" />
-            <element signature="e#0#33#1" />
-          </folding>
+        <state relative-caret-position="212">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/customercontroll/CustomerShow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/customers.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/VehicleDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+        <state relative-caret-position="374">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="method#makeVehicle#0;class#VehicleDao#0" />
+            <element signature="method#loadOne#0;class#VehicleDao#0" />
+            <element signature="method#loadMany#0;class#VehicleDao#0" />
+            <element signature="method#loadAll#0;class#VehicleDao#0" />
+            <element signature="method#loadById#0;class#VehicleDao#0" />
+            <element signature="method#loadByOwnerId#0;class#VehicleDao#0" />
+            <element signature="method#save#0;class#VehicleDao#0" />
+            <element signature="method#delete#0;class#VehicleDao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/time/LocalDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="381" column="66" lean-forward="true" selection-start-line="381" selection-start-column="66" selection-end-line="381" selection-end-column="66" />
+          <folding>
+            <element signature="e#15963#15964#0" expanded="true" />
+            <element signature="e#16031#16032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/customerform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/employeeform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/ReportsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/Reports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="77" column="13" lean-forward="true" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportManhours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/report-manhours.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/servlets/raports/ReportProfits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/report-profits.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/reports/reports.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>

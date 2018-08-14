@@ -20,6 +20,7 @@
 
 <br><br>
 <a href="/customer-show?id=17">Klient 17</a><br>
+<a href="/reports/reports.jsp">Raporty</a><br>
 
 
 <jsp:include page="WEB-INF/fragments/footer.jsp"/>
