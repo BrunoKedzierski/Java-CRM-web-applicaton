@@ -1,6 +1,6 @@
-package pl.coderslab.servlets.customercontroll;
+package pl.coderslab.servlets.vehiclecontroll;
 
-import pl.coderslab.dao.CustomerDao;
+import pl.coderslab.dao.VehicleDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CustomerDel", urlPatterns = "/customer-del")
-public class CustomerDel extends HttpServlet {
+@WebServlet(name = "VehicleDel", urlPatterns = "/vehicle-del")
+public class VehicleDel extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -19,8 +19,8 @@ public class CustomerDel extends HttpServlet {
         String idStr = request.getParameter("id");
         try {
             int id = Integer.parseInt(idStr);
-            CustomerDao.delete(id);
-            response.sendRedirect("/customer-show");
+            VehicleDao.delete(id);
+            response.sendRedirect("/vehicle-show");
         } catch (NumberFormatException ignored) {
         }
     }

@@ -1,7 +1,7 @@
-package pl.coderslab.servlets.customercontroll;
+package pl.coderslab.servlets.vehiclecontroll;
 
-import pl.coderslab.dao.CustomerDao;
-import pl.coderslab.models.Customer;
+import pl.coderslab.dao.VehicleDao;
+import pl.coderslab.models.Vehicle;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "CustomerShow", urlPatterns = "/customer-show")
-public class CustomerShow extends HttpServlet {
+@WebServlet(name = "VehicleShow", urlPatterns = "/vehicle-show")
+public class VehicleShow extends HttpServlet {
     private static String mode;
 
     @Override
@@ -30,20 +30,10 @@ public class CustomerShow extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Customer> customers;
-        String idStr = request.getParameter("id");
-        if (idStr != null) {
-            customers = new ArrayList<>();
-            try {
-                int id = Integer.parseInt(idStr);
-                customers.add(CustomerDao.loadById(id));
-            } catch (NumberFormatException ignored) {
-            }
-        } else {
-            customers = CustomerDao.loadAll();
-        }
-        request.setAttribute("customers", customers);
+        ArrayList<Vehicle> vehicles = VehicleDao.loadAll();
+        request.setAttribute("vehicles", vehicles);
         request.setAttribute("mode", mode);
-        getServletContext().getRequestDispatcher("/customers.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/vehicles.jsp").forward(request, response);
+
     }
 }

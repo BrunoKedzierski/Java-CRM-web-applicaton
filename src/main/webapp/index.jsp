@@ -15,6 +15,11 @@
 
 <a href="/test">test</a><br>
 <a href="/customer-show">Klienci</a><br>
+<a href="/vehicle-show">Samochody</a><br>
+
+<br><br>
+<a href="/customer-show?id=17">Klient 17</a><br>
+
 
 <jsp:include page="WEB-INF/fragments/footer.jsp"/>
 </body>
