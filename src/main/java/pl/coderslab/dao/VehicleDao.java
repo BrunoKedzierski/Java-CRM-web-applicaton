@@ -55,10 +55,10 @@ public class VehicleDao {
         return loadOne(query, String.valueOf(id));
     }
 
-    public static Vehicle loadByOwnerId(int id) {
+    public static ArrayList<Vehicle> loadByOwnerId(int id) {
         //language=MySQL
         String query = "SELECT * FROM vehicles WHERE owner_id = ?";
-        return loadOne(query, String.valueOf(id));
+        return loadMany(query, String.valueOf(id));
     }
 
     public static void save(Vehicle vehicle) {

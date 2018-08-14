@@ -16,6 +16,7 @@
 <a href="/test">test</a><br>
 <a href="/customer-show">Klienci</a><br>
 <a href="/vehicle-show">Samochody</a><br>
+<a href="/employee-show">Pracownicy</a><br>
 
 <br><br>
 <a href="/customer-show?id=17">Klient 17</a><br>

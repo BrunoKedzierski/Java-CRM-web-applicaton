@@ -38,6 +38,7 @@
         <th>Imię</th>
         <th>Nazwisko</th>
         <th>Data urodzenia</th>
+        <th>Lista samochodów</th>
         <c:if test="${mode == 'edit'}">
             <th>Akcje</th>
         </c:if>
@@ -49,6 +50,7 @@
             <td>${customer.name}</td>
             <td>${customer.surname}</td>
             <td>${customer.birthday}</td>
+            <td><a href="/vehicle-show?id=${customer.id}">Samochody</a></td>
             <c:if test="${mode == 'edit'}">
                 <td>
                     <a href="/customer-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>

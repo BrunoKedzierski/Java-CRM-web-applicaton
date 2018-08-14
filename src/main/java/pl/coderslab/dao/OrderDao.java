@@ -62,13 +62,21 @@ public class OrderDao {
         return loadOne(query, String.valueOf(id));
     }
 
-    public static List<Order> loadLast(int limit) {
+    public static ArrayList<Order> loadLast(int limit) {
         //language=MySQL
         String query = "SELECT *\n" +
                 "FROM orders\n" +
                 "ORDER BY received DESC\n" +
                 "LIMIT ?";
         return loadMany(query, String.valueOf(limit));
+    }
+
+    public static ArrayList<Order> loadByEmployeeId(int id) {
+        //language=MySQL
+        String query = "SELECT *\n" +
+                "FROM orders\n" +
+                "WHERE employee_id = ?";
+        return loadMany(query, String.valueOf(id));
     }
 
     public static void save(Order order) {
