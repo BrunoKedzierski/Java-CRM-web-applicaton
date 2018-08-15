@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: michal
@@ -13,14 +14,23 @@
 <body>
 <jsp:include page="WEB-INF/fragments/header.jsp"/>
 
-<a href="/test">test</a><br>
-<a href="/customer-show">Klienci</a><br>
-<a href="/vehicle-show">Samochody</a><br>
-<a href="/employee-show">Pracownicy</a><br>
+<c:if test="${not empty sessionScope.username}">
+    Zalogowany jako ${sessionScope.username}
+    <a href="/admin/logout">Wyloguj</a>
+</c:if>
+<c:if test="${empty sessionScope.username}">
+    Niezalogowany
+    <a href="/login">Zaloguj</a>
+</c:if>
 
 <br><br>
-<a href="/customer-show?id=17">Klient 17</a><br>
-<a href="/reports/reports.jsp">Raporty</a><br>
+
+<a href="/admin/customer-show">Klienci</a><br>
+<a href="/admin/vehicle-show">Samochody</a><br>
+<a href="/admin/employee-show">Pracownicy</a><br>
+
+<br><br>
+<a href="/admin/reports">Raporty</a><br>
 
 
 <jsp:include page="WEB-INF/fragments/footer.jsp"/>

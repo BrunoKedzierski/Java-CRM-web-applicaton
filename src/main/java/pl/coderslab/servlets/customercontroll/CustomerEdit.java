@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-@WebServlet(name = "CustomerEdit", urlPatterns = "/customer-edit")
+@WebServlet(name = "CustomerEdit", urlPatterns = "/admin/customer-edit")
 public class CustomerEdit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();

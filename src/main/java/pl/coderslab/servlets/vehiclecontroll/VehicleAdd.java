@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-@WebServlet(name = "VehicleAdd",urlPatterns = "/vehicle-add")
+@WebServlet(name = "VehicleAdd",urlPatterns = "/admin/vehicle-add")
 public class VehicleAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        String name = request.getParameter("name");

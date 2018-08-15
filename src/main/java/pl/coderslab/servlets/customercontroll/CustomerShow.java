@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "CustomerShow", urlPatterns = "/customer-show")
+@WebServlet(name = "CustomerShow", urlPatterns = "/admin/customer-show")
 public class CustomerShow extends HttpServlet {
     private static String mode;
 
