@@ -2,20 +2,21 @@ package pl.coderslab.models;
 
 public enum Status {
 
-    ACCEPTED("Przyjęty"),
-    APPROVED_EXPENSES("Zatwierdzone koszty naprawy"),
-    REPAIR_IN_PROGRESS("W naprawie"),
-    REPAIR_COMPLETE("Gotowy do odbioru"),
-    RESIGNATION("Rezygnacja");
+    ACCEPTED("Accepted"),
+    APPROVED_EXPENSES("Expenses approved"),
+    REPAIR_IN_PROGRESS("Repair in progress"),
+    REPAIR_COMPLETE("Repair complete"),
+    RESIGNATION("Resgnation");
 
-    private String description;
+    public String description;
 
-    Status(String description) {
+     Status(String description) {
         this.description = description;
     }
 
     public String getDescription() {
         return description;
     }
+
 
 }

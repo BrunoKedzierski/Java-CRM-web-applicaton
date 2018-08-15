@@ -34,6 +34,6 @@ public class CustomerAdd extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/customerform.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/CustomerView/customerform.jsp").forward(request, response);
     }
 }

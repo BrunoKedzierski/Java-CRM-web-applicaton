@@ -1,0 +1,30 @@
+package pl.coderslab.servlets.OrdersControl;
+
+import pl.coderslab.dao.CustomerDao;
+import pl.coderslab.dao.OrderDao;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet(name = "OrdersDelete",urlPatterns = "/orders-del")
+public class OrdersDelete extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String idStr = request.getParameter("id");
+        try {
+            int id = Integer.parseInt(idStr);
+            OrderDao.delete(id);
+            response.sendRedirect("/orders-show");
+        } catch (NumberFormatException ignored) {
+        }
+
+    }
+}
+

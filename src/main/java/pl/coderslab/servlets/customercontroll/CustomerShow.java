@@ -20,7 +20,7 @@ public class CustomerShow extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Customer> customers = CustomerDao.loadAll();
         request.setAttribute("customers", customers);
-        getServletContext().getRequestDispatcher("/customers.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/CustomerView/customers.jsp").forward(request, response);
 
     }
 }

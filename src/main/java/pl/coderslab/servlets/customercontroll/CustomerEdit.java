@@ -16,10 +16,7 @@ import java.time.format.DateTimeParseException;
 @WebServlet(name = "CustomerEdit", urlPatterns = "/customer-edit")
 public class CustomerEdit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
-        int id = (int) session.getAttribute("id");
-        session.removeAttribute("id");
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         String birthdayStr = request.getParameter("birthday");
@@ -43,35 +40,8 @@ public class CustomerEdit extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
-        String idStr = request.getParameter("id");
-        String name = request.getParameter("name");
-        String surname = request.getParameter("surname");
-        String birthdayStr = request.getParameter("birthday");
-
-        try {
-            int id = Integer.parseInt(idStr);
-
-            session.setAttribute("id", id);
-            request.setAttribute("name", name);
-            request.setAttribute("surname", surname);
-
-            if (birthdayStr != null) {
-                try {
-                    LocalDate birthday = LocalDate.parse(birthdayStr);
-                    request.setAttribute("birthday", birthday);
-                } catch (DateTimeParseException ignored) {
-                }
-            }
-
-
-            getServletContext().getRequestDispatcher("/customerform.jsp").forward(request, response);
-
-        } catch (NumberFormatException e) {
-//            response.sendRedirect("/customer-show");
-        }
-
-
+       int id  = Integer.parseInt(request.getParameter("id"));
+       request.setAttribute("id",id);
+       getServletContext().getRequestDispatcher("/CustomerView/customerEdit.jsp").forward(request,response);
     }
 }

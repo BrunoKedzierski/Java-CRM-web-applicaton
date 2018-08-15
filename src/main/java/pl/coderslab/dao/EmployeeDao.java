@@ -4,7 +4,6 @@ import pl.coderslab.models.Employee;
 import pl.coderslab.services.DbService;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,18 +56,20 @@ public class EmployeeDao {
     }
 
     public static void save(Employee employee) {
+        List<String> parameters = new ArrayList<>();
+        parameters.add(employee.getName());
+        parameters.add(employee.getSurname());
+        parameters.add(employee.getAddress());
+        parameters.add(employee.getPhone());
+        parameters.add(employee.getNote());
+        parameters.add(String.valueOf(employee.getManhourValue()));
+
         if (employee.getId() == 0) {
             //language=MySQL
             String query = "INSERT INTO employees(name, surname, address, phone, note, manhourValue) VALUES(?, ?, ?, ?, ?, ?)";
 
             try {
-                Integer id = DbService.insertIntoDatabase(query,
-                        employee.getName(),
-                        employee.getSurname(),
-                        employee.getAddress(),
-                        employee.getPhone(),
-                        employee.getNote(),
-                        String.valueOf(employee.getManhourValue()));
+                Integer id = DbService.insertIntoDatabase(query, parameters);
                 if (id != null) {
                     employee.setId(id);
                 }
@@ -80,14 +81,8 @@ public class EmployeeDao {
             String query = "UPDATE employees SET name = ?, surname = ?, address = ?, phone = ?, note = ?, manhourValue = ? WHERE id = ?";
 
             try {
-                DbService.executeUpdate(query,
-                        employee.getName(),
-                        employee.getSurname(),
-                        employee.getAddress(),
-                        employee.getPhone(),
-                        employee.getNote(),
-                        String.valueOf(employee.getManhourValue()),
-                        String.valueOf(employee.getId()));
+                parameters.add(String.valueOf(employee.getId()));
+                DbService.executeUpdate(query, parameters);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
