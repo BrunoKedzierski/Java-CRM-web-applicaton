@@ -12,15 +12,15 @@ Coders Repair - Java CRM  web applicaton for a car repair shop
 * [Apache Tomcat version  9.0.10](http://tomcat.apache.org/) - Servlet container
 
 ## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* Michał Filipowski  - [GitHub account](https://github.com/michofilip) 
+* Bruno Kędzierski  - [GitHub account](https://github.com/BrunoKedzierski) 
+* Joanna Augustyniak  - [GitHub account](https://github.com/JAugustyniak) 
+ 
 
 ## License
 
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Project created during Java bootcamp, hosted by [CodersLab](https://github.com/CodersLab), August 2018.
 
