@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("username", loginUser);
         }
 
-        response.sendRedirect("/admin/homepage");
+        response.sendRedirect("/admin/index");
 
     }
 

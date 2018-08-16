@@ -8,40 +8,44 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-@WebServlet(name = "CustomerEdit", urlPatterns = "/customer-edit")
+@WebServlet(name = "CustomerEdit", urlPatterns = "/admin/customer-edit")
 public class CustomerEdit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String name = request.getParameter("name");
-        String surname = request.getParameter("surname");
-        String birthdayStr = request.getParameter("birthday");
+        String idStr = request.getParameter("id");
+        try {
+            int id = Integer.parseInt(idStr);
+            String name = request.getParameter("name");
+            String surname = request.getParameter("surname");
+            String birthdayStr = request.getParameter("birthday");
 
-        LocalDate birthday = null;
-        if (birthdayStr != null && !birthdayStr.isEmpty()) {
-            try {
-                birthday = LocalDate.parse(birthdayStr);
-            } catch (DateTimeParseException ignored) {
+            LocalDate birthday = null;
+            if (birthdayStr != null && !birthdayStr.isEmpty()) {
+                try {
+                    birthday = LocalDate.parse(birthdayStr);
+                } catch (DateTimeParseException ignored) {
+                }
             }
+
+            Customer customer = new Customer(id, name, surname, birthday);
+            CustomerDao.save(customer);
+        } catch (NullPointerException ignored) {
         }
-        System.out.println(id);
-        System.out.println(name);
-        System.out.println(surname);
-        System.out.println(birthday);
 
-        Customer customer = new Customer(id, name, surname, birthday);
-        CustomerDao.save(customer);
-
-        response.sendRedirect("/customer-show");
+        response.sendRedirect("/admin/customer-show");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       int id  = Integer.parseInt(request.getParameter("id"));
-       request.setAttribute("id",id);
-       getServletContext().getRequestDispatcher("/CustomerView/customerEdit.jsp").forward(request,response);
+        String idStr = request.getParameter("id");
+        try {
+            int id = Integer.parseInt(idStr);
+            request.setAttribute("customer", CustomerDao.loadById(id));
+        } catch (NullPointerException ignored) {
+        }
+
+        getServletContext().getRequestDispatcher("/WEB-INF/CustomerView/customerEdit.jsp").forward(request, response);
     }
 }

@@ -87,7 +87,7 @@ public class VehicleDao {
 
             try {
                 parameters.add(String.valueOf(vehicle.getId()));
-                Integer id = DbService.insertIntoDatabase(query, parameters);
+                DbService.executeUpdate(query, parameters);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

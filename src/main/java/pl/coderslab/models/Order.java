@@ -14,7 +14,7 @@ public class Order {
     private Vehicle vehicle;
     private Float price;
     private Float expense;
-    private Float manhours;
+    private Integer manhours;
 
     public Order() {
         this.id = 0;
@@ -22,13 +22,13 @@ public class Order {
 
     public Order(LocalDate received, LocalDate planedBeginning, LocalDate begun, Employee employee,
                  String problemDescription, String repairDescription, Status status, Vehicle vehicle,
-                 Float price, Float expense, Float manhours) {
+                 Float price, Float expense, Integer manhours) {
         this(0, received, planedBeginning, begun, employee, problemDescription, repairDescription, status, vehicle, price, expense, manhours);
     }
 
     public Order(int id, LocalDate received, LocalDate planedBeginning, LocalDate begun, Employee employee,
                  String problemDescription, String repairDescription, Status status, Vehicle vehicle,
-                 Float price, Float expense, Float manhours) {
+                 Float price, Float expense, Integer manhours) {
         this.id = id;
         this.received = received;
         this.planedBeginning = planedBeginning;
@@ -160,11 +160,11 @@ public class Order {
         return this;
     }
 
-    public Float getManhours() {
+    public Integer getManhours() {
         return manhours;
     }
 
-    public Order setManhours(Float manhours) {
+    public Order setManhours(Integer manhours) {
         this.manhours = manhours;
         return this;
     }

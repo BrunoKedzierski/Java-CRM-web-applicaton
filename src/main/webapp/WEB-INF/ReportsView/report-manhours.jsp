@@ -8,8 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
-<form class="form-inline" action="/report-manhours" method="post">
+<jsp:include page="../fragments/header.jsp"/>
+<form class="form-inline" action="/admin/report-manhours" method="post">
     <div class="form-group">
         <label>Date from </label>
         <input type="date" class="form-control" placeholder="From" name="from" style="margin-left: 5px; margin-right: 5px">
@@ -56,7 +56,7 @@
 </div>
 
 </div>
-<jsp:include page="../WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="../fragments/footer.jsp"/>
 </html>
 
 </html>

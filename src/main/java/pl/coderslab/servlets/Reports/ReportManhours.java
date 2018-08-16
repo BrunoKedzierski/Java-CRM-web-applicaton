@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
-@WebServlet(name = "ReportManhours", urlPatterns = "/report-manhours")
+@WebServlet(name = "ReportManhours", urlPatterns = "/admin/report-manhours")
 public class ReportManhours extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LocalDate from = null;
@@ -45,13 +45,13 @@ public class ReportManhours extends HttpServlet {
             e.printStackTrace();
         }
 
-        getServletContext().getRequestDispatcher("/ReportsView/report-manhours.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/ReportsView/report-manhours.jsp").forward(request, response);
     }
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        getServletContext().getRequestDispatcher("/ReportsView/report-manhours.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/ReportsView/report-manhours.jsp").forward(request, response);
     }
 }

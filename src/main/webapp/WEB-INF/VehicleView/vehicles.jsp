@@ -10,14 +10,15 @@
 <!DOCTYPE html>
 <html>
 
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
+<jsp:include page="../fragments/header.jsp"/>
 
 
 <!-- Page Content -->
 <div class="card mb-3">
     <div class="card-header">
         <i class="fas fa-car-alt"></i>
-        Vehicles</div>
+        Vehicles
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -29,8 +30,8 @@
                     <th>Production</th>
                     <th>Next checkup</th>
                     <th>Owner</th>
-                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Edit</th>
 
                 </tr>
                 </thead>
@@ -42,8 +43,8 @@
                     <th>Production</th>
                     <th>Next checkup</th>
                     <th>Owner</th>
-                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -54,15 +55,17 @@
                         <td>${vehicle.brand}</td>
                         <td>${vehicle.productionYear}</td>
                         <td>${vehicle.nextCheckup}</td>
-                        <td>#${vehicle.owner.id} ${vehicle.owner.surname}  </td>
-                        <td><a href="/vehicle-delete?id=${vehicle.id}">Delete <i class="fas fa-trash-alt"></i></a>  </td>
-                        <td><a href="/vehicle-edit?id=${vehicle.id}">Edit <i class="fas fa-edit"></i></a> </td>
+                        <td>
+                            <a href="/admin/customer-show?id=${vehicle.owner.id}">#${vehicle.owner.id} ${vehicle.owner.name} ${vehicle.owner.surname}</a>
+                        </td>
+                        <td><a href="/admin/vehicle-delete?id=${vehicle.id}">Delete <i class="fas fa-trash-alt"></i></a></td>
+                        <td><a href="/admin/vehicle-edit?id=${vehicle.id}">Edit <i class="fas fa-edit"></i></a></td>
                     </tr>
                 </c:forEach>
 
                 </tbody>
             </table>
-            <a href="/vehicle-add" class="btn btn-primary" style="float: right" role="button">Add </a>
+            <a href="/admin/vehicle-add" class="btn btn-primary" style="float: right" role="button">Add </a>
         </div>
     </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -70,6 +73,6 @@
 
 </div>
 
-<jsp:include page="../WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="../fragments/footer.jsp"/>
 
 </html>

@@ -39,10 +39,7 @@
         </init-param>
 
     </servlet>
-    <servlet>
-        <servlet-name>Homepage</servlet-name>
-        <jsp-file>/WEB-INF/index.jsp</jsp-file> <!-- Your JSP. Must begin with '/' -->
-    </servlet>
+
 
     <servlet-mapping>
 
@@ -51,10 +48,7 @@
         <url-pattern>/login</url-pattern>
 
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Homepage</servlet-name>
-        <url-pattern>/admin/homepage</url-pattern> <!-- Any URL you want here -->
-    </servlet-mapping>
+    >
 
 
 

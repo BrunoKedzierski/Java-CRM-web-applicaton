@@ -8,13 +8,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
+<jsp:include page="../fragments/header.jsp"/>
 
 <!-- Page Content -->
 <div class="card mb-3">
     <div class="card-header">
         <i class="fas fa-user-astronaut"></i>
-        Employees</div>
+        Employees
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -27,7 +28,9 @@
                     <th>Contact</th>
                     <th>Note</th>
                     <th>Salary</th>
-                    <th>Actions</th>
+                    <th>Orders</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -39,7 +42,9 @@
                     <th>Contact</th>
                     <th>Note</th>
                     <th>Salary</th>
-                    <th>Actions</th>
+                    <th>Orders</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -52,17 +57,16 @@
                         <td>${employee.phone}</td>
                         <td>${employee.note}</td>
                         <td>${employee.manhourValue}</td>
-                        <td>
-                            <a href="/employee-del?id=${employee.id}">Delete<i class="fas fa-trash-alt"></i></a>
-                            <a href="/employee-edit?id=${employee.id}">Edit<i class="fas fa-edit"></i></a>
-                        </td>
+                        <td><a href="/admin/orders-show?employeeId=${employee.id}">Orders</a></td>
+                        <td><a href="/admin/employee-del?id=${employee.id}">Delete<i class="fas fa-trash-alt"></i></a></td>
+                        <td><a href="/admin/employee-edit?id=${employee.id}">Edit<i class="fas fa-edit"></i></a></td>
                     </tr>
                 </c:forEach>
 
                 </tbody>
             </table>
         </div>
-        <a href="/employee-add" class="btn btn-primary"  style="float: right" role="button">Add </a>
+        <a href="/admin/employee-add" class="btn btn-primary" style="float: right" role="button">Add </a>
     </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>

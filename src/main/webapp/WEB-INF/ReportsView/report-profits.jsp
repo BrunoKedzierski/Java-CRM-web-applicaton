@@ -8,8 +8,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
-<form class="form-inline" action="/report-profits" method="post">
+<jsp:include page="../fragments/header.jsp"/>
+<form class="form-inline" action="/admin/report-profits" method="post">
     <div class="form-group">
         <label>Date from </label>
         <input type="date" class="form-control" placeholder="From" name="from" style="margin-left: 5px; margin-right: 5px">
@@ -51,12 +51,9 @@
 
                 </tbody>
             </table>
-        </div>
-        <a href="/employee-add" class="btn btn-primary"  style="float: right" role="button">Add </a>
-    </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 
 </div>
-<jsp:include page="../WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="../fragments/footer.jsp"/>
 </html>

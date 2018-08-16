@@ -7,10 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
+<jsp:include page="../fragments/header.jsp"/>
 <h1 style="text-align: center;"> Add employee</h1>
 <hr>
-<form action="/employee-add" method="post" >
+<form action="/admin/employee-add" method="post">
     <div class="form-group" style="margin-left: auto;margin-right: auto;">
         <label>Name</label>
         <input type="text" class="form-control" placeholder="Name" name="name" required>
@@ -34,17 +34,19 @@
     </div>
     <div class="form-group" style="margin-left: auto;margin-right: auto;">
         <label>Note</label>
-        <input type="text" class="form-control" placeholder="Note" name="note" required>
+        <input type="text" class="form-control" placeholder="Note" name="note">
         </label>
     </div>
     <div class="form-group" style="margin-left: auto;margin-right: auto;">
         <label>Salary</label>
-        <input type="number" min="0.01" step="0.01" class="form-control" placeholder="Salary" name="manhourValue" required>
+        <input type="number" min="0.01" step="0.01" class="form-control" placeholder="Salary" name="manhourValue"
+               required>
         </label>
     </div>
 
-    <button type="submit" class="btn-lg btn-primary" style="float: right" value="submit">Add       <i class="fas fa-plus"></i></button>
+    <button type="submit" class="btn-lg btn-primary" style="float: right" value="submit">Add <i class="fas fa-plus"></i>
+    </button>
 </form>
 
-<jsp:include page="../WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="../fragments/footer.jsp"/>
 </html>

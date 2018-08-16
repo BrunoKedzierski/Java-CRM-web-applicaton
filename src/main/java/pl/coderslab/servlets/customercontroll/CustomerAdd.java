@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-@WebServlet(name = "CustomerAdd", urlPatterns = "/customer-add")
+@WebServlet(name = "CustomerAdd", urlPatterns = "/admin/customer-add")
 public class CustomerAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
@@ -30,10 +30,10 @@ public class CustomerAdd extends HttpServlet {
         Customer customer = new Customer(name, surname, birthday);
         CustomerDao.save(customer);
 
-        response.sendRedirect("/customer-show");
+        response.sendRedirect("/admin/customer-show");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/CustomerView/customerform.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/CustomerView/customerform.jsp").forward(request, response);
     }
 }
