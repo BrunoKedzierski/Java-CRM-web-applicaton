@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="WEB-INF/fragments/header.jsp"/>
+<jsp:include page="fragments/header.jsp">
 <!-- DataTables Example -->
 <div class="card mb-3">
     <div class="card-header">
@@ -503,6 +503,6 @@
 
 
 
-<jsp:include page="WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>

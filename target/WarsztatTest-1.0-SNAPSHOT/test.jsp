@@ -1,49 +1,46 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: michal
-  Date: 12.08.18
-  Time: 17:55
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Customers</title>
-</head>
-<body>
+<form action="/vehicle-add" method="post">
+    <div class="form-group" style="margin-left: auto;margin-right: auto;">
+        <label>Model</label>
+        <input type="text" class="form-control" placeholder="Model" name="model" required>
+        </label>
 
-<table>
-    <c:forEach var="customer" items="${customers}">
-        <tr>
-            <td>${customer}</td>
-        </tr>
-    </c:forEach>
-</table>
+    </div>
+    <div class="form-group" style="margin-left: auto;margin-right: auto;">
+        <label>Brand</label>
+        <input type="text" class="form-control" placeholder="Brand" name="brand" required>
+        </label>
+    </div>
 
-<table>
-    <c:forEach var="employee" items="${employees}">
-        <tr>
-            <td>${employee}</td>
-        </tr>
-    </c:forEach>
-</table>
+    <div class="form-group" style="margin-left: auto;margin-right: auto;" >
+        <label>Production</label>
+        <input  class="form-control" placeholder="Year" type="text" name="year">
+        </label>
 
-<table>
-    <c:forEach var="vehicle" items="${vehicles}">
-        <tr>
-            <td>${vehicle}</td>
-        </tr>
-    </c:forEach>
-</table>
+    </div>
 
-<table>
-    <c:forEach var="order" items="${orders}">
-        <tr>
-            <td>${order}</td>
-        </tr>
-    </c:forEach>
-</table>
+    <div class="form-group" style="margin-left: auto;margin-right: auto;" >
+        <label>Next checkup</label>
+        <input  class="form-control" placeholder="Checkup date" type="text" name="checkup">
+        </label>
 
-</body>
-</html>
+    </div>
+
+
+
+    <div class="form-group" style="margin-left: auto;margin-right: auto;" >
+        <label>Next checkup</label>
+        <input  class="form-control" placeholder="Checkup date" type="date" name="checkup">
+        </label>
+
+    </div>
+    <div class="form-group" style="margin-left: auto;margin-right: auto;" >
+        <label>Owner id</label>
+        <input  class="form-control" placeholder="Id" type="text" name="id">
+        </label>
+
+    </div>
+
+    <button type="submit" class="btn btn-default" value="submit">Wyslij</button>
+
+
+</form>
