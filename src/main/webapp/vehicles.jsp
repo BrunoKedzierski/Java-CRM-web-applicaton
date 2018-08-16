@@ -22,13 +22,13 @@
 </head>
 <body>
 
-<form action="/vehicle-show" method="post">
+<form action="/admin/vehicle-show" method="post">
     <button type="submit">${label}</button>
 </form>
 
 <div>
     <c:if test="${mode == 'edit'}">
-        <a href="/vehicle-add">Dodaj samochód</a>
+        <a href="/admin/vehicle-add">Dodaj samochód</a>
     </c:if>
 </div>
 
@@ -53,12 +53,12 @@
             <td>${vehicle.productionYear}</td>
             <td>${vehicle.nextCheckup}</td>
             <td>
-                <a href="/customer-show?id=${vehicle.owner.id}">${vehicle.owner.name} ${vehicle.owner.surname}</a>
+                <a href="/admin/customer-show?id=${vehicle.owner.id}">${vehicle.owner.name} ${vehicle.owner.surname}</a>
             </td>
             <c:if test="${mode == 'edit'}">
                 <td>
                         <%--<a href="/vehicle-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>--%>
-                        <a href="/vehicle-del?id=${vehicle.id}">Usuń</a>
+                        <a href="/admin/vehicle-del?id=${vehicle.id}">Usuń</a>
                 </td>
             </c:if>
         </tr>

@@ -11,11 +11,11 @@
 <head>
     <c:if test="${mode == 'add'}">
         <c:set var="title" value="Dodawanie samochodu"/>
-        <c:set var="target" value="/vehicle-add"/>
+        <c:set var="target" value="/admin/vehicle-add"/>
     </c:if>
     <c:if test="${mode == 'edit'}">
         <c:set var="title" value="Edycja samochodu"/>
-        <c:set var="target" value="/vehicle-edit"/>
+        <c:set var="target" value="/admin/vehicle-edit"/>
     </c:if>
 
     <title>${title}</title>

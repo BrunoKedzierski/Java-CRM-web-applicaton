@@ -11,11 +11,11 @@
 <head>
     <c:if test="${mode == 'add'}">
         <c:set var="title" value="Dodawanie klienat"/>
-        <c:set var="target" value="/customer-add"/>
+        <c:set var="target" value="/admin/customer-add"/>
     </c:if>
     <c:if test="${mode == 'edit'}">
         <c:set var="title" value="Edycja klienta"/>
-        <c:set var="target" value="/customer-edit"/>
+        <c:set var="target" value="/admin/customer-edit"/>
     </c:if>
 
     <title>${title}</title>

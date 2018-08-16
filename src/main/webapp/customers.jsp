@@ -22,13 +22,13 @@
 </head>
 <body>
 
-<form action="/customer-show" method="post">
+<form action="/admin/customer-show" method="post">
     <button type="submit">${label}</button>
 </form>
 
 <div>
     <c:if test="${mode == 'edit'}">
-        <a href="/customer-add">Dodaj klienta</a>
+        <a href="/admin/customer-add">Dodaj klienta</a>
     </c:if>
 </div>
 
@@ -49,11 +49,11 @@
             <td>${customer.name}</td>
             <td>${customer.surname}</td>
             <td>${customer.birthday}</td>
-            <td><a href="/vehicle-show?id=${customer.id}">Samochody</a></td>
+            <td><a href="/admin/vehicle-show?id=${customer.id}">Samochody</a></td>
             <c:if test="${mode == 'edit'}">
                 <td>
-                    <a href="/customer-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>
-                    <a href="/customer-del?id=${customer.id}">Usuń</a>
+                    <a href="/admin/customer-edit?id=${customer.id}&name=${customer.name}&surname=${customer.surname}&birthday=${customer.birthday}">Edytuj</a>
+                    <a href="/admin/customer-del?id=${customer.id}">Usuń</a>
                 </td>
             </c:if>
         </tr>
