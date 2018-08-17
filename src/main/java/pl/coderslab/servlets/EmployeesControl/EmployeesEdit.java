@@ -37,7 +37,7 @@ public class EmployeesEdit extends HttpServlet {
         try {
             int id = Integer.parseInt(idStr);
             request.setAttribute("employee", EmployeeDao.loadById(id));
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException | NumberFormatException ignored) {
         }
 
         getServletContext().getRequestDispatcher("/WEB-INF/EmployeeView/employeeEdit.jsp").forward(request, response);

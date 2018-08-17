@@ -43,7 +43,7 @@ public class CustomerEdit extends HttpServlet {
         try {
             int id = Integer.parseInt(idStr);
             request.setAttribute("customer", CustomerDao.loadById(id));
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException |  NumberFormatException ignored) {
         }
 
         getServletContext().getRequestDispatcher("/WEB-INF/CustomerView/customerEdit.jsp").forward(request, response);

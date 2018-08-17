@@ -48,7 +48,7 @@ public class VehicleEdit extends HttpServlet {
             int id = Integer.parseInt(idStr);
             request.setAttribute("vehicle", VehicleDao.loadById(id));
             request.setAttribute("customers", CustomerDao.loadAll());
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException | NumberFormatException ignored) {
         }
 
 

@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 
-<jsp:include page="../WEB-INF/fragments/header.jsp"/>
+<jsp:include page="/WEB-INF/fragments/header.jsp"/>
 
 
 <!-- Page Content -->
@@ -91,6 +91,6 @@
 </div>
 
 </div>
-<jsp:include page="../WEB-INF/fragments/footer.jsp"/>
+<jsp:include page="/WEB-INF/fragments/footer.jsp"/>
 
 </html>

@@ -98,7 +98,7 @@ public class OrdersEdit extends HttpServlet {
             request.setAttribute("employees", EmployeeDao.loadAll());
             request.setAttribute("vehicles", VehicleDao.loadAll());
             request.setAttribute("statuses", Status.values());
-        } catch (NullPointerException ignored) {
+        } catch (NullPointerException | NumberFormatException ignored) {
         }
         getServletContext().getRequestDispatcher("/WEB-INF/OrdersView/OrdersEdit.jsp").forward(request, response);
     }
