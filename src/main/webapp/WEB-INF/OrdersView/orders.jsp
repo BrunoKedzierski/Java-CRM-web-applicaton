@@ -85,7 +85,7 @@
                 </tbody>
             </table>
         </div>
-        <a href="/orders-add" class="btn btn-primary" style="float: right" ole="button">Add </a>
+        <a href="/admin/orders-add" class="btn btn-primary" style="float: right" ole="button">Add </a>
     </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
