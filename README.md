@@ -2,6 +2,12 @@
 
 Coders Repair - Java CRM  web applicaton for a car repair shop
 
+## UI screenshots
+![Screenshot from 2018-08-14 11-02-51](https://user-images.githubusercontent.com/40804691/170724189-a4e11c5d-5019-4102-8ce0-674af0671b95.png)
+
+![Screenshot from 2018-08-14 11-03-15](https://user-images.githubusercontent.com/40804691/170724212-7e362588-828c-4922-88d4-9e8583e95707.png)
+
+![Screenshot from 2018-08-14 11-04-33](https://user-images.githubusercontent.com/40804691/170724222-6d7ae9ca-5891-4e09-98db-d4eedb115c11.png)
 
 ## Built With
 
@@ -13,17 +19,4 @@ Coders Repair - Java CRM  web applicaton for a car repair shop
 * [Bootstrap](https://getbootstrap.com/) - The web framework used
 * [Font Awesome](https://fontawesome.com/) - Icon set
 
-
-## Authors
-* Michał Filipowski  - [GitHub account](https://github.com/michofilip) 
-* Bruno Kędzierski  - [GitHub account](https://github.com/BrunoKedzierski) 
-* Joanna Augustyniak  - [GitHub account](https://github.com/JAugustyniak) 
- 
-
-## License
-
-
-## Acknowledgments
-
-* Project created during Java bootcamp, hosted by [CodersLab](https://github.com/CodersLab), August 2018.
 
